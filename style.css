@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(231, 234, 231);
+    user-select: none;
+}
+
+.music_container{
+    margin: auto;
+    margin-top: 5rem;
+    width: 50%;
+    background-color: rgb(140, 198, 198);
+    text-align: center;
+    border-style: groove;
+    border-radius: 5%;
+    height: 32rem;
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+img{
+    width: 10rem;
+    border-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h2{
+    margin: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 2rem;
+    text-shadow: 2px 2px 4px #000000;
+    position: relative;
+}
+
+h3{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin: 2rem;
+    padding: 0.5rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.music_controls{
+    margin: 2rem;
+}
+.music_controls i{
+    margin:1.7rem;
+    margin-left: 0;
+}
+#prev{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 13px;
+    border-radius: 50%;
+}
+#play{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 13px;
+    border-radius: 50%;
+}
+#next{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 13px;
+    border-radius: 50%;
+}

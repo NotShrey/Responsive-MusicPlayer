@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="main_div">
+        <div class="music_container">
+            <h2>Times they are changing</h2>
+            <h3>Bob Dylan</h3>
+            <div class="img_container">
+                <img src="images/pic1.jpg" alt="">
+            </div>
+            <audio src="music/song1.mp3"></audio>
+
+
+            <div class="music_controls">
+                <i class="fa-solid fa-backward" id="prev" class="icons" title="Previous"></i>
+                <i class="fa-solid fa-play" id="play" class="icons" title="Play"></i>
+                <i class="fa-solid fa-forward" id="next" class="icons" title="Forward"></i>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/126d8c3d58.js" crossorigin="anonymous"></script>
+
+    <script>
+        const play = document.getElementById("play");
+        const music = document.querySelector("audio");
+        const artist = document.querySelector("h3")
+        const title =document.querySelector("h2");
+        const prev =document.getElementById("prev");
+        const next =document.getElementById("next");
+        const img = document.querySelector("img");
+
+        const songs = [{
+            name: 'song1',
+            title: 'Times They Are Changin',
+            artist: 'Bob Dylan'
+        },
+        {
+            name: 'song2',
+            title: 'Ghosts',
+            artist: 'Laura Marling'
+        },
+        {
+            name: 'song3',
+            title: 'Lightning Bolt',
+            artist: 'Jake Bugg'
+        }
+    
+    ]
+
+        let isPlaying = false;
+        const playMusic = () =>{
+            music.play();
+            play.classList.replace('fa-play','fa-pause');
+            isPlaying = true;
+        };
+
+       const pauseMusic = () => {
+            isPlaying = false;
+            music.pause();
+            play.classList.replace('fa-pause', 'fa-play');
+        };
+
+        play.addEventListener('click', ()=>{
+            if(isPlaying){
+                pauseMusic();
+            }
+            else{
+                playMusic();
+            }
+        })
+
+        const loadSong = (songs) => {
+            title.textContent = songs.title;
+            artist.textContent = songs.artist;
+            music.src ="music/" + songs.name + ".mp3";
+            img.src  = "images/" + songs.name + ".jpg";
+        };
+        songIndex =0;
+        loadSong(songs[songIndex]);
+
+        const nextSong = () => {
+            songIndex = (songIndex+1) % songs.length;
+            loadSong(songs[songIndex])
+        }
+
+        const prevSong = () => {
+            songIndex = (songIndex -1 + songs.length) % songs.length;
+            loadSong(songs[songIndex]);
+        }
+
+        next.addEventListener('click', nextSong);
+        prev.addEventListener('click', prevSong);
+    </script>
+</body>
+</html>
